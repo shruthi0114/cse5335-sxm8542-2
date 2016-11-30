@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://code.angularjs.org/1.4.8/angular.min.js"</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+ <script src="//d3js.org/d3.v3.min.js"></script>
+ 
+<script src="controller1.js"></script>
+<link rel="stylesheet" href="table.css">
+
+<head>
+<style>
+h3 {
+    text-shadow: 2px 2px;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>Restaurants</title>
+</head>
+
+<body >
+
+
+	<!-- May Node and Express be with you. -->
+	
+	<div ng-app="myApp" ng-controller="appController">
+		<div align="center">
+			<b><h1>List of Restaurants in United States</h1></b>
+
+
+			<button  class="mymove" ng-click="submit()" style"font-color:"brown"" >Restaurants List</button>
+			<table ng-show = "tblShow" value="false" bgcolor="white">
+				<tr class="mymove" style="color:blue">
+					<td>No.</td>
+					<td>Restaurant Name</td>
+					<td>Head Office Location</td>
+					<td>Number of Locations</td>
+				</tr>
+				
+				  <tr class="animated-row" ng-repeat="x in fmsQuotes  | limitTo:20">
+					<td class="animated-child">{{ x.Id }}</td>
+					<h3><td class="animated-child flash">{{ x.Name }}</td></h3>
+					<td class="animated-child">{{ x.Head_office_location}}</td>
+					<td class="animated-child">{{ x.Number_of_locations}}</td>
+					</div>
+				</tr> 
+				
+			</table>
+
+		</div>
+	</div>
+</body>
+</html>

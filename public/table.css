@@ -1,0 +1,103 @@
+body{
+    background-image: url("img.jpg");
+    font:500 17px/22px 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+
+}
+
+.headings{
+color:brown;
+}
+
+.animated-row {
+    overflow: hidden;
+
+}
+.animated-row .animated-child {
+    position: relative;
+}
+.animated-row, .animated-row .animated-child{
+	border: 1px solid grey;
+	border-collapse: collapse;
+	/* padding: 5px; */
+    -webkit-transition: 1s linear all;
+    -moz-transition: 1s linear all;
+    -ms-transition: 1s linear all;
+    -o-transition: 1s linear all;
+    transition: 1s linear all;
+    color:brown;
+}
+.animated-row.ng-enter .animated-child, .animated-row.ng-leave.ng-leave-active .animated-child {
+    opacity:0;
+    right:-25%;
+}
+.animated-row.ng-leave .animated-child, .animated-row.ng-enter.ng-enter-active .animated-child {
+    opacity:1;
+    right:0%;
+}
+@-webkit-keyframes flash {
+  from {color: green;}
+    to {color:brown;}
+}
+
+.flash{
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:ease-in-out;
+    -webkit-animation-direction: alternate;
+}
+
+.mymove {
+    animation: bounceIn 0.75s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+/*  60% {
+    transform: scale(0.65);
+    opacity: 1;
+  }*/
+  100% {
+    transform: scale(1);
+  }
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+
+.mymove {
+    animation: bounceIn 0.75s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.25);
+    opacity: 0;
+  }
+/*  60% {
+    transform: scale(0.65);
+    opacity: 1;
+  }*/
+  100% {
+    transform: scale(1);
+  }
+}
+
+ tr {
+    background-color:white;
+}
+h3
+{text-shadow: 2px 2px red;}
